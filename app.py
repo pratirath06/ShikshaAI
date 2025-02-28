@@ -61,7 +61,7 @@ if prompt := st.chat_input("How are you feeling today?"):
     # Generate bot response
     with st.chat_message("assistant"):
         response = conversation.invoke({"input": prompt})
-        st.markdown(response)
+        st.markdown(response['answer'])
 
     # Add bot response to chat history
     st.session_state.messages.append({"role": "assistant", "content": response})
