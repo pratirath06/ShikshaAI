@@ -8,7 +8,7 @@ from langchain.chains import LLMChain
 from langchain_core.prompts import ChatPromptTemplate
 
 groq_api_key = st.secrets["Groq_API"]
-llm = ChatGroq(api_key=groq_api_key, model_name="deepseek-r1-distill-llama-70b")
+llm = ChatGroq(api_key=groq_api_key, model_name="llama-3.3-70b-specdec")
 
 memory = ConversationBufferMemory(
     return_messages=True,
